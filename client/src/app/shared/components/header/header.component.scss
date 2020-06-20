@@ -1,0 +1,28 @@
+ul li {
+  list-style: none;
+}
+
+.mat-toolbar-multiple-rows {
+  min-height: 30px;
+  max-height: 50px;
+}
+
+.mat-toolbar.mat-primary {
+  background: #4e9dcd;
+  color: #eeeeee;
+  border-bottom-width: 10px;
+  border-color: coral;
+}
+
+.mat-toolbar-row {
+  min-height: 30px;
+  max-height: 50px;
+}
+
+mat-nav-list {
+  padding-top: 0;
+}
+
+.mat-divider {
+  border-top-color: #1a3244;
+}

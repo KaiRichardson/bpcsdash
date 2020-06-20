@@ -1,0 +1,14 @@
+{
+  "name": "pivot-dash",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server/src/index.js",
+  "scripts": {
+    "start": "node server/src/index.js",
+    "client": "cd client && npm start",
+    "install": "cd client/ && npm install && cd ../server/ && npm install",
+    "fix": "cd client/ && npm audit fix && cd ../server/ && npm audit fix",
+    "build": "cd client && npm run build"
+  },
+  "license": "Apache 2.0"
+}
