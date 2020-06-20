@@ -8,7 +8,7 @@
     "start:prod": "node server/src/index.js",
     "start:dev": "concurrently \"nodemon --ignore 'client/*'\" \"npm run client\"",
     "client": "cd client && npm run start",
-    "install:all": "npm install && cd client/ && npm install && cd ../server/ && npm install",
+    "install": "cd client/ && npm install && cd ../server/ && npm install",
     "fix:all": "npm audit fix && cd client/ && npm audit fix && cd ../server/ && npm audit fix",
     "build": "cd client && npm run build"
   },
