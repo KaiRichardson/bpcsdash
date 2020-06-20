@@ -8,10 +8,10 @@ const oktaAuth = require("./auth");
 
 const connection = mysql.createConnection({
   port: 3306,
-  host: "m7nj9dclezfq7ax1.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
-  user: "ci6x184naqtb2so7",
-  password: "k85ihpgsneu16rpj",
-  database: "lcuqs5ux986qociq",
+  host: "d9c88q3e09w6fdb2.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+  user: "l70m4f3enz7o6mxx",
+  password: "ouc6s5oj0hwlb8eq",
+  database: "n1d3grgaf4qy6cvu",
 });
 
 if (process.env.JAWSDB_URL) {
