@@ -5,13 +5,22 @@ const mysql = require("mysql");
 const bearerToken = require("express-bearer-token");
 const events = require("./events");
 const oktaAuth = require("./auth");
+require("dotenv").config();
+
+// const connection = mysql.createConnection({
+//   port: 3306,
+//   host: "d9c88q3e09w6fdb2.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+//   user: "l70m4f3enz7o6mxx",
+//   password: "ouc6s5oj0hwlb8eq",
+//   database: "n1d3grgaf4qy6cvu",
+// });
 
 const connection = mysql.createConnection({
-  port: 3306,
-  host: "d9c88q3e09w6fdb2.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
-  user: "l70m4f3enz7o6mxx",
-  password: "ouc6s5oj0hwlb8eq",
-  database: "n1d3grgaf4qy6cvu",
+  port: process.env.JAWS_PORT,
+  host: process.env.JAWS_HOST,
+  user: process.env.JAWS_USER,
+  password: process.env.JAWS_PASSWORD,
+  database: process.env.JAWS_DATABASE,
 });
 
 if (process.env.JAWSDB_URL) {

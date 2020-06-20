@@ -4,11 +4,18 @@
   "description": "",
   "main": "server/src/index.js",
   "scripts": {
-    "start": "node server/src/index.js",
-    "client": "cd client && npm start",
-    "install": "cd client/ && npm install && cd ../server/ && npm install",
-    "fix": "cd client/ && npm audit fix && cd ../server/ && npm audit fix",
+    "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
+    "start:prod": "node server/src/index.js",
+    "start:dev": "concurrently \"nodemon --ignore 'client/*'\" \"npm run client\"",
+    "client": "cd client && npm run start",
+    "install:all": "npm install && cd client/ && npm install && cd ../server/ && npm install",
+    "fix:all": "npm audit fix && cd client/ && npm audit fix && cd ../server/ && npm audit fix",
     "build": "cd client && npm run build"
   },
-  "license": "Apache 2.0"
+  "license": "Apache 2.0",
+  "devDependencies": {
+    "concurrently": "^5.2.0",
+    "nodemon": "^2.0.4",
+    "if-env": "^1.0.4"
+  }
 }
