@@ -15,7 +15,7 @@ require("dotenv").config();
 //   database: "n1d3grgaf4qy6cvu",
 // });
 
-const connection = mysql.createConnection({
+let connection = mysql.createConnection({
   port: process.env.JAWS_PORT,
   host: process.env.JAWS_HOST,
   user: process.env.JAWS_USER,
