@@ -30,11 +30,13 @@ connection.connect();
 
 const port = process.env.PORT || 8080;
 
+// Define middleware here
 const app = express()
   .use(cors())
   .use(bodyParser.json())
   .use(events(connection));
 
+// Start the API server
 app.listen(port, () => {
   console.log(`Express server listening on port ${port}`);
 });
